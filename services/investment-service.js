@@ -23,3 +23,7 @@ async function getReportById(id){
 async function getReportsbyInvestmentName(name){
     return await InvestmentRepository.getReportsbyInvestmentName(name);
 }
+
+async function getReportsbyInvestmentId(id){
+    return await InvestmentRepository.getReportsbyInvestmentId(id);
+}

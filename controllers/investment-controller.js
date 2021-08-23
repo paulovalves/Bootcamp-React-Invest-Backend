@@ -97,3 +97,18 @@ async function getReportsByValueDesc(req, res){
         res.status(400).send({ error: error.message });
     }
 }
+
+export default {
+    getInvestments,
+    getReports,
+    getInvestmentsById,
+    getInvestmentByName,
+    getReportById,
+    getReportsbyInvestmentName,
+    getReportsbyInvestmentId,
+    getReportsByMonth,
+    getReportsByYear,
+    getReportsByDate,
+    getReportsByValueAsc,
+    getReportsByValueDesc
+}

@@ -56,3 +56,11 @@ async function getReportsbyInvestmentId(req, res){
         res.status(400).send({ error: error.message });
     }
 }
+
+async function getReportsByMonth(req, res){
+    try {
+        res.send(await InvestmentService.getReportsByMonth(req.params.month));
+    } catch (error) {
+        res.status(400).send({ error: error.message });
+    }
+}

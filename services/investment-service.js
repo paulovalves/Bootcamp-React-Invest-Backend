@@ -7,3 +7,7 @@ async function getInvestments(){
 async function getReports(){
     return await InvestmentRepository.getReports();
 }
+
+async function getInvestmentById(id){
+    return await InvestmentRepository.getInvestmentById(id);
+}

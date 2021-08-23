@@ -123,5 +123,6 @@ export default {
     getReportsByInvestmentName,
     getReportsByInvestmentId,
     getReportsByMonth,
-    getReportsByYear
+    getReportsByYear,
+    getReportsByDate
 }

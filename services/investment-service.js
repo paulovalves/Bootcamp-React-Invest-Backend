@@ -27,3 +27,7 @@ async function getReportsbyInvestmentName(name){
 async function getReportsbyInvestmentId(id){
     return await InvestmentRepository.getReportsbyInvestmentId(id);
 }
+
+async function getReportsByMonth(month){
+    return await InvestmentRepository.getReportsByMonth(month);
+}

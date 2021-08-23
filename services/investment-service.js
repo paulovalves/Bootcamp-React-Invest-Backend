@@ -39,3 +39,7 @@ async function getReportsByYear(year){
 async function getReportsByDate(month, year) {
     return await InvestmentRepository.getReportsByDate(month, year);
 }
+
+async function getReportsByValueAsc(){
+    return await InvestmentRepository.getReportsByValueAsc();
+}

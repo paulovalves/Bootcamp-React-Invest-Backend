@@ -89,3 +89,11 @@ async function getReportsByValueAsc(req, res){
         res.status(400).send({ error: error.message });
     }
 }
+
+async function getReportsByValueDesc(req, res){
+    try {
+        res.send(await InvestmentService.getReportsByValueDesc());
+    } catch (error) {
+        res.status(400).send({ error: error.message });
+    }
+}

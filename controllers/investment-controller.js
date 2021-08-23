@@ -40,3 +40,11 @@ async function getReportById(req, res){
         res.status(400).send({ error: error.message });
     }
 }
+
+async function getReportsbyInvestmentName(req, res){
+    try{
+        res.send(await InvestmentService.getReportsbyInvestmentName(req.params.name));
+    } catch (error){
+        res.status(400).send({ error: error.message });
+    }
+}

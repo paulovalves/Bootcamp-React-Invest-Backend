@@ -30,6 +30,20 @@ async function getInvestmentsById(id){
     throw new Error('Investimento não foi encontrado.');
 }
 
+async function getInvestmentsByName(name){
+    const data = await getInvestments();
+    const result = data.filter((i) => i.description === name);
+
+    if(result){
+        return result;
+    }
+
+    throw new Error('Investimento não foi encontrado.');
+}
+
 export default {
-    getInvestments
+    getInvestments,
+    getReports,
+    getInvestmentsById,
+    getInvestmentsByName
 }

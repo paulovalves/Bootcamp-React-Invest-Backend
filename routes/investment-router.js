@@ -4,7 +4,7 @@ import InvestmentController from '../controllers/investment-controller.js';
 
 router.get('/', InvestmentController.getInvestments);
 router.get('/reports', InvestmentController.getReports);
-router.get('/id/:id', InvestmentController.getInvestmentsById);
+router.get('/id/:id', InvestmentController.getInvestmentById);
 router.get('/name/:name', InvestmentController.getInvestmentByName);
 router.get('/reports/id/:id', InvestmentController.getReportById);
 router.get('/reports/name/:name', InvestmentController.getReportsbyInvestmentName);

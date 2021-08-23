@@ -16,7 +16,7 @@ async function getReports(req, res){
     }
 }
 
-async function getInvestmentsById(req, res){
+async function getInvestmentById(req, res){
     try {
         res.send(await InvestmentService.getInvestmentById(req.params.id));
         
@@ -101,7 +101,7 @@ async function getReportsByValueDesc(req, res){
 export default {
     getInvestments,
     getReports,
-    getInvestmentsById,
+    getInvestmentById,
     getInvestmentByName,
     getReportById,
     getReportsbyInvestmentName,

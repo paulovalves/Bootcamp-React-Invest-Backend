@@ -20,7 +20,7 @@ async function getReports() {
     throw new Error('Reports não encontrados.');
 }
 
-async function getInvestmentsById(id){
+async function getInvestmentById(id){
     const data = await getInvestments();
     const result = data.filter((i) => i.id === id);
 
@@ -31,7 +31,7 @@ async function getInvestmentsById(id){
     throw new Error('Investimento não foi encontrado.');
 }
 
-async function getInvestmentsByName(name){
+async function getInvestmentByName(name){
     const data = await getInvestments();
     const result = data.filter((i) => i.description === name);
 
@@ -54,7 +54,7 @@ async function getReportsById(id){
 }
 
 async function getReportsByInvestmentName(name){
-    const investments = await getInvestmentsByName(name);
+    const investments = await getInvestmentByName(name);
     const reports = await getReports();
 
     const id = investments[0].id;
@@ -142,8 +142,8 @@ async function getReportByValuedesc(){
 export default {
     getInvestments,
     getReports,
-    getInvestmentsById,
-    getInvestmentsByName,
+    getInvestmentById,
+    getInvestmentByName,
     getReportsById,
     getReportsByInvestmentName,
     getReportsByInvestmentId,

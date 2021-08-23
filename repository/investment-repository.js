@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs';
+import _ from 'lodash';
 
 const { readFile } = fs;
 
@@ -107,6 +108,18 @@ async function getReportsByDate(month, year){
     const reports = await getReports();
 
     const result = reports.filter((r) => r.month === parseInt(month) && r.year === parseInt(year));
+
+    if(result){
+        return result;
+    }
+
+    throw new Error('Reports não foram encontrados.');
+}
+
+async function getReportByValueAsc(){
+    const reports = await getReports();
+
+    const result = _.orderBy(reports, ['value'], ['asc']);
 
     if(result){
         return result;

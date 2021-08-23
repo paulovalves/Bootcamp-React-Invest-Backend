@@ -8,6 +8,17 @@ async function getInvestments() {
     return data.investments;
 }
 
+async function getReports() {
+    // @ts-ignore
+    const data = JSON.parse(await readFile(global.fileName));
+    
+    if(data){
+        return data.reports;
+    }
+
+    throw new Error('Reports não encontrados.');
+}
+
 export default {
     getInvestments
 }

@@ -85,5 +85,6 @@ export default {
     getInvestmentsById,
     getInvestmentsByName,
     getReportsById,
-    getReportsByInvestmentName
+    getReportsByInvestmentName,
+    getReportsByInvestmentId
 }

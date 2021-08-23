@@ -64,3 +64,11 @@ async function getReportsByMonth(req, res){
         res.status(400).send({ error: error.message });
     }
 }
+
+async function getReportsByYear(req, res){
+    try {
+        res.send(await InvestmentService.getReportsByYear(req.params.year));
+    } catch (error) {
+        res.status(400).send({ error: error.message });
+    }
+}

@@ -41,9 +41,21 @@ async function getInvestmentsByName(name){
     throw new Error('Investimento não foi encontrado.');
 }
 
+async function getReportsById(id){
+    const reports = await getReports();
+    const result = reports.filter((r) => r.id === id);
+
+    if(result){
+        return result;
+    }
+
+    throw new Error('Report não foi encontrado.');
+}
+
 export default {
     getInvestments,
     getReports,
     getInvestmentsById,
-    getInvestmentsByName
+    getInvestmentsByName,
+    getReportsById
 }

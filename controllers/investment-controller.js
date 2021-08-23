@@ -24,3 +24,11 @@ async function getInvestmentsById(req, res){
         res.status(400).send({ error: error.message });
     }
 }
+
+async function getInvestmentByName(req, res){
+    try {
+        res.send(await InvestmentService.getInvestmentByName(req.params.name));
+    } catch (error) {
+        res.status(400).send({ error: error.message });
+    }
+}

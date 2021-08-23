@@ -127,6 +127,18 @@ async function getReportByValueAsc(){
 
     throw new Error('Reports não foram encontrados.');
 }
+
+async function getReportByValuedesc(){
+    const reports = await getReports();
+
+    const result = _.orderBy(reports, ['value'], ['desc']);
+
+    if(result){
+        return result;
+    }
+
+    throw new Error('Reports não foram encontrados.');
+}
 export default {
     getInvestments,
     getReports,
@@ -137,5 +149,7 @@ export default {
     getReportsByInvestmentId,
     getReportsByMonth,
     getReportsByYear,
-    getReportsByDate
+    getReportsByDate,
+    getReportByValueAsc,
+    getReportByValuedesc
 }

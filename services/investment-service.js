@@ -47,3 +47,18 @@ async function getReportsByValueAsc(){
 async function getReportsByValueDesc(){
     return await InvestmentRepository.getReportsByValueDesc();
 }
+
+export default {
+    getInvestments,
+    getReports,
+    getInvestmentById,
+    getInvestmentByName,
+    getReportById,
+    getReportsbyInvestmentName,
+    getReportsbyInvestmentId,
+    getReportsByMonth,
+    getReportsByYear,
+    getReportsByDate,
+    getReportsByValueAsc,
+    getReportsByValueDesc
+}

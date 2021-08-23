@@ -1,14 +1,14 @@
 {
   "name": "react-bootcamp-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend para o trabalho do segundo modulo do bootcamp React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Paulo Alves",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",

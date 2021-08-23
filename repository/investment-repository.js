@@ -102,6 +102,18 @@ async function getReportsByYear(year){
 
     throw new Error('Reports não foram encontrados.');
 }
+
+async function getReportsByDate(month, year){
+    const reports = await getReports();
+
+    const result = reports.filter((r) => r.month === parseInt(month) && r.year === parseInt(year));
+
+    if(result){
+        return result;
+    }
+
+    throw new Error('Reports não foram encontrados.');
+}
 export default {
     getInvestments,
     getReports,

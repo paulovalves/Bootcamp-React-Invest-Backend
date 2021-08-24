@@ -42,7 +42,7 @@ async function getInvestmentByName(name){
     throw new Error('Investimento não foi encontrado.');
 }
 
-async function getReportsById(id){
+async function getReportById(id){
     const reports = await getReports();
     const result = reports.filter((r) => r.id === id);
 
@@ -116,7 +116,7 @@ async function getReportsByDate(month, year){
     throw new Error('Reports não foram encontrados.');
 }
 
-async function getReportByValueAsc(){
+async function getReportsByValueAsc(){
     const reports = await getReports();
 
     const result = _.orderBy(reports, ['value'], ['asc']);
@@ -128,7 +128,7 @@ async function getReportByValueAsc(){
     throw new Error('Reports não foram encontrados.');
 }
 
-async function getReportByValuedesc(){
+async function getReportsByValueDesc(){
     const reports = await getReports();
 
     const result = _.orderBy(reports, ['value'], ['desc']);
@@ -144,12 +144,12 @@ export default {
     getReports,
     getInvestmentById,
     getInvestmentByName,
-    getReportsById,
+    getReportById,
     getReportsByInvestmentName,
     getReportsByInvestmentId,
     getReportsByMonth,
     getReportsByYear,
     getReportsByDate,
-    getReportByValueAsc,
-    getReportByValuedesc
+    getReportsByValueAsc,
+    getReportsByValueDesc
 }

@@ -20,12 +20,12 @@ async function getReportById(id){
     return await InvestmentRepository.getReportById(id);
 }
 
-async function getReportsbyInvestmentName(name){
-    return await InvestmentRepository.getReportsbyInvestmentName(name);
+async function getReportsByInvestmentName(name){
+    return await InvestmentRepository.getReportsByInvestmentName(name);
 }
 
-async function getReportsbyInvestmentId(id){
-    return await InvestmentRepository.getReportsbyInvestmentId(id);
+async function getReportsByInvestmentId(id){
+    return await InvestmentRepository.getReportsByInvestmentId(id);
 }
 
 async function getReportsByMonth(month){
@@ -54,8 +54,8 @@ export default {
     getInvestmentById,
     getInvestmentByName,
     getReportById,
-    getReportsbyInvestmentName,
-    getReportsbyInvestmentId,
+    getReportsByInvestmentName,
+    getReportsByInvestmentId,
     getReportsByMonth,
     getReportsByYear,
     getReportsByDate,

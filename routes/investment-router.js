@@ -7,7 +7,7 @@ router.get('/reports', InvestmentController.getReports);
 router.get('/id/:id', InvestmentController.getInvestmentById);
 router.get('/name/:name', InvestmentController.getInvestmentByName);
 router.get('/reports/id/:id', InvestmentController.getReportById);
-router.get('/reports/name/:name', InvestmentController.getReportsbyInvestmentName);
+router.get('/reports/name/:name', InvestmentController.getReportsByInvestmentName);
 router.get('/reports/invesmentid/:id', InvestmentController.getReportsbyInvestmentId)
 router.get('/reports/month/:month', InvestmentController.getReportsByMonth);
 router.get('/reports/year/:year', InvestmentController.getReportsByYear);

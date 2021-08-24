@@ -41,9 +41,9 @@ async function getReportById(req, res){
     }
 }
 
-async function getReportsbyInvestmentName(req, res){
+async function getReportsByInvestmentName(req, res){
     try{
-        res.send(await InvestmentService.getReportsbyInvestmentName(req.params.name));
+        res.send(await InvestmentService.getReportsByInvestmentName(req.params.name));
     } catch (error){
         res.status(400).send({ error: error.message });
     }
@@ -51,7 +51,7 @@ async function getReportsbyInvestmentName(req, res){
 
 async function getReportsbyInvestmentId(req, res){
     try {
-        res.send(await InvestmentService.getReportsbyInvestmentId(req.params.id));
+        res.send(await InvestmentService.getReportsByInvestmentId(req.params.id));
     } catch (error) {
         res.status(400).send({ error: error.message });
     }
@@ -104,7 +104,7 @@ export default {
     getInvestmentById,
     getInvestmentByName,
     getReportById,
-    getReportsbyInvestmentName,
+    getReportsByInvestmentName,
     getReportsbyInvestmentId,
     getReportsByMonth,
     getReportsByYear,
